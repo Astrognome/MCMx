@@ -18,7 +18,7 @@ worldbackup::worldbackup()
 QStringList worldbackup::listWorlds()
 {
     QStringList result(fs.listFiles(fs.mcDir() + "/saves","folders","",false));
-    QStringList backupWorlds(fs.listFiles(fs.appDir() + "/backups");
+    QStringList backupWorlds(fs.listFiles(fs.appDir() + "/backups","folders","",false));
         for (int i = 0; i < backupWorlds.count(); i++){
         if (!result.contains(backupWorlds[i])){
             result.append("[deleted] " + backupWorlds[i]);
@@ -32,7 +32,7 @@ QStringList worldbackup::listWorlds()
 
 QStringList worldbackup::listBackups(QString world)
 {
-    if (worldConf_Read(world, "deleted", false)){
+    if (worldConf_Read(world, "deleted", false).toBool()){
         world.remove("[deleted] ");
     }
     QStringList result(fs.listFiles(fs.appDir() + "/backups/" + world,
@@ -55,14 +55,14 @@ void worldbackup::worldConf_Write(QString world, QString key, QVariant value)
     worldSettings.setValue(key, value);
 }
 
-QVariant worldbackup::worldConf_Read(QString world, QString key, QVariant value, QVariant fallback)
+QVariant worldbackup::worldConf_Read(QString world, QString key, QVariant fallback)
 {
     if (world.contains("[deleted] ")){
         world.remove("[deleted] ");
     }
     QString worldDir(fs.appDir() + "/backups/" + world);
     QSettings worldSettings(worldDir + "/config.ini", QSettings::IniFormat);
-    return worldSettings.value(key, value, fallback);
+    return worldSettings.value(key, fallback);
 }
 
 void worldbackup::createBackup(QString world)
@@ -71,8 +71,20 @@ void worldbackup::createBackup(QString world)
     QString backDir(fs.appDir() + "/backups/" + world);
     QDateTime currentTime(QDateTime::currentDateTime());
     QString timeString(currentTime.toString("[yyyy-MM-dd] hh-mm-ss"));
-    backDir = QDir::toNativeSeparators(backDir + "/" + timeString);
-    fs.copyDir(worldDir, backDir);
+    backDir = backDir + "/" + timeString;
+    if (!worldConf_Read(world, "compression/enabled", false).toBool()){
+        fs.copyDir(worldDir, backDir);
+    } else if (worldConf_Read(world, "compression/enabled", false).toBool()){
+        QString compCmd(worldConf_Read(world, "compression/compresscmd", "none").toString());
+        if (compCmd == "none"){
+            general gen;
+            gen.showMessage("Compression Invalid!","","y");
+        } else {
+            compCmd.replace("!backup", backDir);
+            compCmd.replace("!world", worldDir);
+            system(compCmd.toAscii());
+        }
+    }
 }
 
 void worldbackup::removeBackup(QString world, QString backup)

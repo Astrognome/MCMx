@@ -28,7 +28,7 @@
         <item>
          <widget class="QStackedWidget" name="wb_stack">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page">
            <widget class="QListWidget" name="worldList">
@@ -113,13 +113,6 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="wb_cloneWorld">
-               <property name="text">
-                <string>Clone World</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="wb_restoreBackup">
                <property name="text">
                 <string>Restore Backup</string>
@@ -168,6 +161,114 @@
             </property>
             <property name="text">
              <string>Back</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="wb_compExeDirLE">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>230</y>
+              <width>113</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>200</y>
+              <width>111</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Custom Compression</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>230</y>
+              <width>131</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Executable Directory</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>260</y>
+              <width>101</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Compress Cmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>290</y>
+              <width>101</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Decompress Cmd</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="wb_compCompCmdLE">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>260</y>
+              <width>113</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="wb_compDecompCmdLE">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>290</y>
+              <width>113</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="wb_compHelpButton">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>200</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Help</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="wb_compApply">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>320</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Apply To World</string>
             </property>
            </widget>
           </widget>

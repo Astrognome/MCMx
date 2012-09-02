@@ -32,6 +32,12 @@ int general::showMessage(QString message, QString infMessage, QString type)
                 retInt = -1;
                 break;
         }
+    } else if (type == "y"){ //okay box
+        msgBox.setStandardButtons(
+                    QMessageBox::Ok);
+        msgBox.setDefaultButton(QMessageBox::Yes);
+        msgBox.exec();
+        retInt = 1;
     }
     return retInt;
 }

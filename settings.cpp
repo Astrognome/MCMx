@@ -3,12 +3,13 @@
 
 #include <QSettings>
 #include <QString>
+#include <QDir>
 
 //QSettings stfile(QSettings::IniFormat, QSettings::UserScope, "MCMx", "Config");
-QSettings stfile(filestuff::appDir() + "/Config.ini", QSettings::IniFormat);
 
+//QSettings stfile(QString(filestuff::appDir() + "/Config.ini"), QSettings::IniFormat);
 
-settings::settings()
+settings::settings() : stfile(QDir::currentPath() + "/Config.ini", QSettings::IniFormat)
 {
 
 }

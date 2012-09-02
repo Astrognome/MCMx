@@ -62,6 +62,7 @@ bool filestuff::exMake(QString path)
         dir.mkpath(path);
         return false;
     }
+    return true;
 }
 
 void filestuff::removeDir(QString dirName)
