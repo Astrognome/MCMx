@@ -9,7 +9,9 @@
 
 //QSettings stfile(QString(filestuff::appDir() + "/Config.ini"), QSettings::IniFormat);
 
-settings::settings() : stfile(QDir::currentPath() + "/Config.ini", QSettings::IniFormat)
+QSettings stfile(QDir::currentPath() + "/Config.ini", QSettings::IniFormat);
+
+settings::settings()
 {
 
 }

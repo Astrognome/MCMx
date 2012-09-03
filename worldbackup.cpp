@@ -2,6 +2,7 @@
 #include "filestuff.h"
 #include "settings.h"
 #include "general.h"
+#include "mainwindow.h"
 
 #include <QString>
 #include <QStringList>
