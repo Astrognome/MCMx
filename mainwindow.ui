@@ -28,7 +28,7 @@
         <item>
          <widget class="QStackedWidget" name="wb_stack">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="page">
            <widget class="QListWidget" name="worldList">
@@ -271,6 +271,31 @@
              <string>Apply To World</string>
             </property>
            </widget>
+           <widget class="QComboBox" name="wb_storageMethodBox">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>271</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>No Compression</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Custom Compression</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Patching (Expiremental!)</string>
+             </property>
+            </item>
+           </widget>
           </widget>
          </widget>
         </item>
@@ -278,7 +303,7 @@
       </widget>
       <widget class="QWidget" name="ab_tab">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>About</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>

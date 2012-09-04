@@ -71,7 +71,7 @@ void worldbackup::createBackup(QString world)
     QString worldDir(fs.mcDir() + "/saves/" + world);
     QString backDir(fs.appDir() + "/backups/" + world);
     QDateTime currentTime(QDateTime::currentDateTime());
-    QString timeString(currentTime.toString("[yyyy-MM-dd] hh-mm-ss"));
+    QString timeString(currentTime.toString("[yyyy-MM-dd hh-mm-ss]"));
     backDir = backDir + "/" + timeString;
     if (!worldConf_Read(world, "compression/enabled", false).toBool()){
         fs.copyDir(worldDir, backDir);
