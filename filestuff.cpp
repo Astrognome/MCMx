@@ -6,7 +6,7 @@
 #include <QDir>
 #include <QFile>
 
-settings st;
+settings st(true);
 
 filestuff::filestuff()
 {
@@ -34,9 +34,12 @@ QStringList filestuff::listFiles(QString directory, QString filter, QString sort
     QDir dir = directory;
     if(filter == "files"){
         dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    }
-    else if(filter == "folders"){
+    } else if(filter == "folders"){
         dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+    } else if(filter == "both"){
+        dir.setFilter(QDir::Dirs | QDir::Files |
+                      QDir::NoDotAndDotDot | QDir::NoSymLinks);
+
     }
     if(reversed){
         dir.setSorting(QDir::Reversed);

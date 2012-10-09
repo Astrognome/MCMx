@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>MCMx</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -20,6 +20,188 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
+      <widget class="QWidget" name="launchTab">
+       <attribute name="title">
+        <string>Launcher</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="browserPage">
+             <widget class="QWidget" name="layoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>20</y>
+                <width>158</width>
+                <height>25</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QPushButton" name="launchSite1">
+                 <property name="text">
+                  <string>Minecraft.net</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="launchSite2">
+                 <property name="text">
+                  <string>Minecraft Wiki</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWebView" name="launchWebView">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>180</y>
+                <width>391</width>
+                <height>191</height>
+               </rect>
+              </property>
+              <property name="url">
+               <url>
+                <string>http://172.27.72.27/web/login?_bcsp=1&amp;_bceq=U2FsdGVkX1-urG8UdxUxTcvIx8qUmAF7lbZmVBFlCGMvoyKmRCmvrspnwTje2UlywzE98Sp73ArcYOEvAFD23JYrP31Y-TsHeLEhO3gz1pcKXyu6A9pet-hkknVvI_7NNngFH0bXLHW0J2_8VgL8q3iMuiR9Yi420DM7XbxHgxihoXGUjnYSdM9wGa1L4PEnlZaItbewILfLE_AKjBUFGF93oDrewWnASXZiUwdoHmsc-VaC2dOTfv96zgDqoGHXiyH7Nh8I8FWA9MUyhuib1HIWOE_gWEh49ktqNd-8UM6Fao4HDvUgVEDrF3jaI1nU44sHrGigacRqL4eXlpDXJJy-I7VnvWx5xIK2D3eIr2HBiv_tBqRviDtxhwCRyg23mKZ-jJva7cdrJRdTwcW1GH8k7I8D1o0yWVr2ncvJENyGSrnQzB3q_1T62IDicPbFE8s5ZLtQP52Gr-oEQtVQCoRGALiBag5Pk5q_yuD6H1E6SM4lNKAGo78Nomng6S1H3YU9h_GWJ0aI0vsZwR_Qabt43K9wUmcuFhO-FETMBVliBlyVqx9uoSVprZHuGipwr25bKVVSJOA.</string>
+               </url>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="configPage">
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>20</y>
+                <width>431</width>
+                <height>20</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_3">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>101</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Username/Email</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_4">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>61</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Password</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="dowloadLauncher">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>601</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Redownload Launcher</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>50</y>
+                <width>431</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_9">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>80</y>
+                <width>91</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Ram (MB)</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="lineEdit_3">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>80</y>
+                <width>431</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>1024</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="checkBox">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>110</y>
+                <width>81</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>No update</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>launch</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>Config</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="wb_tab">
        <attribute name="title">
         <string>World Backup</string>
@@ -31,271 +213,223 @@
            <number>0</number>
           </property>
           <widget class="QWidget" name="page">
-           <widget class="QListWidget" name="worldList">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>0</y>
-              <width>256</width>
-              <height>371</height>
-             </rect>
-            </property>
-           </widget>
-           <widget class="QListWidget" name="backupList">
-            <property name="geometry">
-             <rect>
-              <x>280</x>
-              <y>0</y>
-              <width>256</width>
-              <height>371</height>
-             </rect>
-            </property>
-           </widget>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="geometry">
-             <rect>
-              <x>570</x>
-              <y>0</y>
-              <width>161</width>
-              <height>371</height>
-             </rect>
-            </property>
-            <property name="title">
-             <string>Actions</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QLabel" name="label">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Global Actions</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="refreshListsButton">
-               <property name="text">
-                <string>Refresh Lists</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="Line" name="line">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>World Actions</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="wb_createBackupButton">
-               <property name="text">
-                <string>Create Backup</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="wb_deleteBackupButton">
-               <property name="text">
-                <string>Delete Backup</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="wb_restoreBackup">
-               <property name="text">
-                <string>Restore Backup</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="wb_advancedButton">
-               <property name="text">
-                <string>Advanced</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="wb_makeBackupDataButton">
-               <property name="text">
-                <string>Enable Backups</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="text">
+                   <string>Worlds</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="worldList"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>Backups</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="backupList"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>Actions</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>Global Actions</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="refreshListsButton">
+                 <property name="text">
+                  <string>Refresh Lists</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>World Actions</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_createBackupButton">
+                 <property name="text">
+                  <string>Create Backup</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_deleteBackupButton">
+                 <property name="text">
+                  <string>Delete Backup</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_restoreBackup">
+                 <property name="text">
+                  <string>Restore Backup</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_advancedButton">
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_makeBackupDataButton">
+                 <property name="text">
+                  <string>Enable Backups</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="page_2">
-           <widget class="QPushButton" name="pushButton_5">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>450</y>
-              <width>741</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Back</string>
-            </property>
-           </widget>
-           <widget class="QLineEdit" name="wb_compExeDirLE">
-            <property name="geometry">
-             <rect>
-              <x>150</x>
-              <y>230</y>
-              <width>113</width>
-              <height>20</height>
-             </rect>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_3">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>200</y>
-              <width>111</width>
-              <height>16</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Custom Compression</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_4">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>230</y>
-              <width>131</width>
-              <height>16</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Executable Directory</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_5">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>260</y>
-              <width>101</width>
-              <height>16</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Compress Cmd</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_6">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>290</y>
-              <width>101</width>
-              <height>16</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Decompress Cmd</string>
-            </property>
-           </widget>
-           <widget class="QLineEdit" name="wb_compCompCmdLE">
-            <property name="geometry">
-             <rect>
-              <x>150</x>
-              <y>260</y>
-              <width>113</width>
-              <height>20</height>
-             </rect>
-            </property>
-           </widget>
-           <widget class="QLineEdit" name="wb_compDecompCmdLE">
-            <property name="geometry">
-             <rect>
-              <x>150</x>
-              <y>290</y>
-              <width>113</width>
-              <height>20</height>
-             </rect>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="wb_compHelpButton">
-            <property name="geometry">
-             <rect>
-              <x>150</x>
-              <y>200</y>
-              <width>111</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Help</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="wb_compApply">
-            <property name="geometry">
-             <rect>
-              <x>150</x>
-              <y>320</y>
-              <width>111</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Apply To World</string>
-            </property>
-           </widget>
-           <widget class="QComboBox" name="wb_storageMethodBox">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>10</y>
-              <width>271</width>
-              <height>22</height>
-             </rect>
-            </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
             <item>
-             <property name="text">
-              <string>No Compression</string>
-             </property>
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string>Compression</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QComboBox" name="wb_storageMethodBox">
+                 <item>
+                  <property name="text">
+                   <string>No Compression</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Custom Compression</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="wb_compStack">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_3"/>
+                 <widget class="QWidget" name="page_4">
+                  <layout class="QVBoxLayout" name="verticalLayout_11">
+                   <item>
+                    <widget class="QPushButton" name="wb_compHelpButton">
+                     <property name="text">
+                      <string>Help</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
+                       <item>
+                        <widget class="QLabel" name="label_5">
+                         <property name="text">
+                          <string>Compress Cmd</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_6">
+                         <property name="text">
+                          <string>Decompress Cmd</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                       <item>
+                        <widget class="QLineEdit" name="wb_compCompCmdLE"/>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="wb_compDecompCmdLE"/>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="wb_compApply">
+                 <property name="text">
+                  <string>Apply To World</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
             <item>
-             <property name="text">
-              <string>Custom Compression</string>
-             </property>
+             <widget class="QPushButton" name="pushButton_5">
+              <property name="text">
+               <string>Back</string>
+              </property>
+             </widget>
             </item>
-            <item>
-             <property name="text">
-              <string>Patching (Expiremental!)</string>
-             </property>
-            </item>
-           </widget>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -315,8 +449,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;MinecraftManagerX&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;v0.01&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;aoeaeoaeaoeoeuoeouebicedpxuhenxu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Created by Astrognome&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Changelog:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;7/9/12: Initial Release&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -336,6 +473,30 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>wb_storageMethodBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>wb_compStack</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

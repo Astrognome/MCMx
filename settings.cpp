@@ -11,9 +11,12 @@
 
 QSettings stfile(QDir::currentPath() + "/Config.ini", QSettings::IniFormat);
 
-settings::settings()
+settings::settings(bool mainconf)
 {
-
+    if (mainconf == false){
+        stfile.setPath(QSettings::IniFormat, QSettings::UserScope,
+                       filestuff::appDir() + "/Config.ini");
+    }
 }
 
 QVariant settings::read(QString group, QString key, QVariant fallback)

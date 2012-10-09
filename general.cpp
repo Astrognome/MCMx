@@ -11,7 +11,7 @@ general::general()
 
 int general::showMessage(QString message, QString infMessage, QString type)
 {
-    int retInt;
+    int retInt = 0;
     QMessageBox msgBox;
     msgBox.setText(message);
     msgBox.setInformativeText(infMessage);

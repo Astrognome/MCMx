@@ -8,11 +8,10 @@
 class settings
 {
 public:
-    settings();
+    settings(bool mainconf=false);
     QVariant read(QString group, QString key, QVariant fallback);
     bool write(QString group, QString key, QVariant value);
 private:
-
 };
 
 #endif // SETTINGS_H

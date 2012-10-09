@@ -10,7 +10,7 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    
+
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -34,6 +34,18 @@ private slots:
 
     void on_wb_restoreBackup_clicked();
 
+    void on_wb_compApply_clicked();
+
+    void on_launchSite1_clicked();
+
+    void on_launchSite2_clicked();
+
+    void on_dowloadLauncher_clicked();
+
+public slots:
+
+    void showStatus(QString text);
+
 private:
     Ui::MainWindow *ui;
 
@@ -41,6 +53,8 @@ private:
     void loadSettings();
     void refreshWorlds(bool startup);
     void refreshBackups();
+
+signals:
 };
 
 #endif // MAINWINDOW_H

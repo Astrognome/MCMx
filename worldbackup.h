@@ -16,6 +16,8 @@ public:
     void restoreBackup(QString world, QString backup);
     void worldConf_Write(QString world, QString key, QVariant value);
     QVariant worldConf_Read(QString world, QString key, QVariant fallback);
+    QString parseWorld(QString world);
+    void compApply(QString world, QString cmd1, QString cmd2, bool enabled);
 };
 
 #endif // WORLDBACKUP_H

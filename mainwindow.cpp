@@ -2,10 +2,12 @@
 #include "ui_mainwindow.h"
 #include "worldbackup.h"
 #include "settings.h"
+#include "launcher.h"
 
 #include <QDir>
 
 worldbackup wb;
+launcher launch;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,12 +18,20 @@ MainWindow::MainWindow(QWidget *parent) :
     loadSettings();
     refreshWorlds(true);
     refreshBackups();
+
+    connect(&launch, SIGNAL(pushStatus(QString)),
+            this, SLOT(showStatus(QString)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     saveSettings();
+}
+
+void MainWindow::showStatus(QString text)
+{
+    ui->statusBar->showMessage(text);
 }
 
 void MainWindow::saveSettings()
@@ -84,7 +94,21 @@ void MainWindow::on_worldList_currentRowChanged()
 
 void MainWindow::on_wb_advancedButton_clicked() //change wb to page 2
 {
+    QString world(ui->worldList->currentItem()->text());
     ui->wb_stack->setCurrentIndex(1);
+    if (wb.worldConf_Read(world, "compression/enabled", false).toBool()){
+        ui->wb_compCompCmdLE->setText(
+                    wb.worldConf_Read(world, "compression/compresscmd", "").toString());
+        ui->wb_compDecompCmdLE->setText(
+                    wb.worldConf_Read(world, "compression/restorecmd", "").toString());
+        ui->wb_compStack->setCurrentIndex(1);
+        ui->wb_storageMethodBox->setCurrentIndex(1);
+    } else {
+        ui->wb_compCompCmdLE->clear();
+        ui->wb_compDecompCmdLE->clear();
+        ui->wb_compStack->setCurrentIndex(0);
+        ui->wb_storageMethodBox->setCurrentIndex(0);
+    }
 }
 
 void MainWindow::on_pushButton_5_clicked()
@@ -117,4 +141,32 @@ void MainWindow::on_wb_restoreBackup_clicked()
     wb.restoreBackup(
                 ui->worldList->currentItem()->text(),
                 ui->backupList->currentItem()->text());
+}
+
+void MainWindow::on_wb_compApply_clicked()
+{
+    if(ui->wb_storageMethodBox->currentIndex() == 0){
+        wb.compApply(ui->worldList->currentItem()->text(),
+                     "","",false);
+    } else if (ui->wb_storageMethodBox->currentIndex() == 1){
+        wb.compApply(ui->worldList->currentItem()->text(),
+                     ui->wb_compCompCmdLE->text(),
+                     ui->wb_compDecompCmdLE->text(),true);
+    }
+}
+
+void MainWindow::on_launchSite1_clicked() //minecraft.net
+{
+    ui->launchWebView->setUrl(QUrl("http://www.minecraft.net/"));
+}
+
+void MainWindow::on_launchSite2_clicked() //minecraftwiki.net
+{
+    ui->launchWebView->setUrl(QUrl("http://minecraftwiki.net/"));
+}
+
+void MainWindow::on_dowloadLauncher_clicked()
+{
+    launch.downloadLauncher();
+    ui->statusBar->showMessage("Launcher Dowloaded");
 }

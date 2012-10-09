@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui\
+    webkit\
+    network
 
 TARGET = MCMx
 TEMPLATE = app
@@ -15,12 +17,16 @@ SOURCES += main.cpp\
     worldbackup.cpp \
     filestuff.cpp \
     settings.cpp \
-    general.cpp
+    general.cpp \
+    networkops.cpp \
+    launcher.cpp
 
 HEADERS  += mainwindow.h \
     worldbackup.h \
     filestuff.h \
     settings.h \
-    general.h
+    general.h \
+    networkops.h \
+    launcher.h
 
 FORMS    += mainwindow.ui
